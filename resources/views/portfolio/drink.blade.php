@@ -17,9 +17,17 @@
             </div>
         </nav>
     </sectionc>
+
     <section id="drink" class="mt-1" > 
         <div class="line1">
-            <div class="d-flex h-d-photo-1">
+            <div id="drink1" class="d-flex h-d-photo-1 scrollbar">
+                <button type="button" class="but border-0" id="left" onclick="left('#drink1')">
+                    <img src="image\icon\arrow-l.svg" alt="">
+                </button>
+
+                <button type="button" class="but border-0" id="right" onclick="right('#drink1')">
+                    <img src="image/icon/arrow-r.svg" alt="">
+                </button>
                 <div class=" mr-1 mb-1">
                     <img  src="storage/photos/drink/2.jpg" alt="">
                 </div>
@@ -45,22 +53,27 @@
             </div>
         </div>
         <div class="line2">
-            <div class="d-flex h-d-photo-2">
-                <div class=" mr-1 mb-1">
-                    <img  src="storage/photos/drink/6.jpg" alt="">
+            <div id="drink2">
+                <div class="d-flex h-d-photo-2 scrollbar">
+                    <button type="button" class="but border-0" id="left-d" onclick="left('#drink2')">
+                        <img src="image\icon\arrow-l.svg" alt="">
+                    </button>
+                    <button type="button" class="but border-0" id="right-d" onclick="right('#drink2')">
+                        <img src="image/icon/arrow-r.svg" alt="">
+                    </button>
+                    <div class=" mr-1 mb-1">
+                        <img  src="storage/photos/drink/6.jpg" alt="">
+                    </div>
+                    <div class=" mr-1 mb-1">
+                        <img  src="storage/photos/drink/8.jpg" alt="">
+                    </div>
+                    <div class=" mr-1 mb-1">
+                        <img  src="storage/photos/drink/7.jpg" alt="">
+                    </div>
+                    <div class=" mr-1 mb-1">
+                        <img  src="storage/photos/drink/8.jpg" alt="">
+                    </div>   
                 </div>
-                <div class=" mr-1 mb-1">
-                    <img  src="storage/photos/drink/8.jpg" alt="">
-                </div>
-                <div class=" mr-1 mb-1">
-                    <img  src="storage/photos/drink/7.jpg" alt="">
-                </div>
-                <div class=" mr-1 mb-1">
-                    <img  src="storage/photos/drink/8.jpg" alt="">
-                </div>
-
-
-                
             </div>
         </div>
     </section>

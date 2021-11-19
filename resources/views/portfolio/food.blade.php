@@ -17,26 +17,16 @@
             </div>
         </nav>
     </sectionc>
-    <section id="food" class="mt-1"> 
-        <div class="line1 h1-f-photo">
-            <div class=" d-flex">
-                <div class=" mr-1 mb-1">
-                    <img  src="storage/photos/food/1.jpg" alt="">
-                </div>
-                <div class=" mr-1 mb-1">
-                    <img  src="storage/photos/food/2.jpg" alt="">
-                </div>
-                <div class=" mr-1 mb-1">
-                    <img  src="storage/photos/food/1.jpg" alt="">
-                </div>
-                <div class=" mr-1 mb-1">
-                    <img  src="storage/photos/food/3.jpg" alt="">
-                </div>
-               
-            </div>
-        </div>
-        <div class="line2">
-            <div class="d-flex h2-f-photo">
+    <section id="food" class="mt-1" style="height: 100%"> 
+        <div class="line1">
+            <div id="food1" class="d-flex h2-f-photo scrollbar ">
+                <button type="button" class="but border-0" id="left" onclick="left('#food1')">
+                    <img src="image\icon\arrow-l.svg" alt="">
+                </button>
+                <button type="button" class="but border-0 right" id="right" onclick="right('#food1')">
+                    <img src="image/icon/arrow-r.svg" alt="">
+                </button>
+
                 <div class=" mr-1 mb-1">
                     <img  src="storage/photos/food/4.jpg" alt="">
                 </div>
@@ -50,17 +40,43 @@
                     <img  src="storage/photos/food/8.jpg" alt="">
                 </div>
                 <div class=" mr-1 mb-1">
-                <img  src="storage/photos/food/7.jpg" alt="">
+                    <img  src="storage/photos/food/7.jpg" alt="">
                 </div>
                 <div class=" mr-1 mb-1">
                     <img  src="storage/photos/food/8.jpg" alt="">
                 </div>
                 <div class=" mr-1 mb-1">
-                <img  src="storage/photos/food/7.jpg" alt="">
+                    <img  src="storage/photos/food/7.jpg" alt="">
                 </div>
                 
             </div>
         </div>
+            <div class="line2">
+                <div id="food2" class="h1-f-photo scrollbar">
+                    <button type="button" class="but border-0" id="left-d" onclick="left('#food2')">
+                        <img src="image\icon\arrow-l.svg" alt="">
+                    </button>
+                    <button type="button" class="but border-0" id="right-d" onclick="right('#food2')">
+                        <img src="image/icon/arrow-r.svg" alt="">
+                    </button>
+                    <div class=" d-flex">
+                        <div class=" mr-1 mb-1">
+                            <img  src="storage/photos/food/1.jpg" alt="">
+                        </div>
+                        <div class=" mr-1 mb-1">
+                            <img  src="storage/photos/food/2.jpg" alt="">
+                        </div>
+                        <div class=" mr-1 mb-1">
+                            <img  src="storage/photos/food/1.jpg" alt="">
+                        </div>
+                        <div class=" mr-1 mb-1">
+                            <img  src="storage/photos/food/3.jpg" alt="">
+                        </div>
+                    
+                    </div>
+                </div>
+            </div>
+
     </section>
     
 @endsection

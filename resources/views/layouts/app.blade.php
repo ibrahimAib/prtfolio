@@ -7,67 +7,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
-    <style>
-        .bg-image{
-            height: 600px;
-            background-image: url(public/storage/photos/1.jpg);
-            background-repeat: no-repeat;
-        }
-        .h1-f-photo{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .h1-f-photo img {
-            max-height: 251px;
-            width: auto;
-        }
-        .h1-f-photo img:hover{
-            max-height: 250px;
-            cursor: pointer;
-        }
-        .h2-f-photo{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .h2-f-photo img {
-            max-height: 321.5px;
-            width: auto;
-        }
-        .h2-f-photo img:hover{
-            max-height: 307px;
-            cursor: pointer;
-        }
-        .h-d-photo-1{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .h-d-photo-1 img {
-            max-height: 334px;
-            width: auto;
-        }
-        .h-d-photo-1 img:hover{
-            max-height: 335px;
-            cursor: pointer;
-        }
-
-        .h-d-photo-2{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .h-d-photo-2 img {
-            max-height: 265px;
-            width: auto;
-        }
-        .h-d-photo-2 img:hover{
-            max-height: 264px;
-            cursor: pointer;
-        }
-    </style>
+    <title>@yield('title','IBRAHIM BIN ALI | إبراهيم بن علي')</title>
+<link rel="stylesheet" href="{{ asset('css/food.css') }}">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
@@ -82,6 +23,8 @@
 
 @yield('content')
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 <script>
     var hidden = false;
@@ -93,6 +36,24 @@
             document.getElementById('food').style.visibility = 'visible';
         }
     }
+    function left(div){
+        var leftPos = $(div).scrollLeft();
+        console.log(leftPos);    
+        $(div).animate({
+            scrollLeft: leftPos - 50
+        }, 400);
+    };
+
+
+    function right(div) {
+        var leftPos = $(div).scrollLeft();
+        console.log(leftPos); 
+        $(div).animate({
+            scrollLeft: leftPos + 50
+        }, 400);
+    };
+
+// 
 </script>
 </body>
 </html>

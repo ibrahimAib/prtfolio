@@ -1,0 +1,109 @@
+.bg-image{
+    height: 600px;
+    background-image: url(public/storage/photos/1.jpg);
+    background-repeat: no-repeat;
+}
+.h1-f-photo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.h1-f-photo img {
+    max-height: 251px;
+    width: auto;
+}
+.h1-f-photo img:hover{
+    max-height: 250px;
+    cursor: pointer;
+}
+.h2-f-photo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.h2-f-photo img {
+    max-height: 321.5px;
+    width: auto;
+}
+.h2-f-photo img:hover{
+    max-height: 307px;
+    cursor: pointer;
+}
+.but{
+    width: 60px;
+    height: 60px;
+    border-radius:100px;
+    background: none;
+}
+.but img{
+    height: 50px;
+    width: 50px;
+    opacity: 0.5;
+
+}
+
+.line1{
+    position: relative;
+}
+.line2{
+    position: relative;
+}
+#right{
+    position: absolute;
+    top: 40%;
+    right: 50px;
+}
+#left{
+    position: absolute;
+    top: 40%;
+    left: 50px;
+}
+#right-d{
+    background:none;
+    position: absolute;
+    top: 40%;
+    right: 50px;
+}
+#left-d{
+    background:none;
+    position: absolute;
+    top: 40%;
+    left: 50px;
+}
+.scrollbar{
+    overflow-x:scroll;
+}
+
+.scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+.h-d-photo-1{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.h-d-photo-1 img {
+    max-height: 334px;
+    width: auto ;
+}
+.h-d-photo-1 img:hover{
+    max-height: 333px;
+    cursor: pointer;
+}
+
+.h-d-photo-2{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.h-d-photo-2 img {
+    max-height: 265px;
+    width: auto;
+}
+.h-d-photo-2 img:hover{
+    max-height: 264px;
+    cursor: pointer;
+}
