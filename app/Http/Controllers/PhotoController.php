@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Photo;
 use Illuminate\Http\Request;
 
 class PhotoController extends Controller
@@ -13,11 +14,15 @@ class PhotoController extends Controller
      */
     public function index()
     {
-        return view('portfolio.food');
+        $line1 = Photo::where('line', '1')->get();
+        $line2 = Photo::where('line', '2')->get();
+        return view('portfolio.food', compact('line1', 'line2'));
     }
     public function food()
     {
-        return view('portfolio.food');
+        $line1 = Photo::where('line', '1')->get();
+        $line2 = Photo::where('line', '2')->get();
+        return view('portfolio.food', compact('line1', 'line2'));
     }
     public function drink()
     {
@@ -31,7 +36,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        //
+        return view('portfolio.create');
     }
 
     /**
@@ -42,7 +47,17 @@ class PhotoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $comption = request('comption');
+        $photo_path = request('photo_path')->store('uplode', 'public');
+
+        Photo::create(
+            [
+                'comption' => $comption,
+                'photo_path' => $photo_path,
+                'line' => request('line')
+            ]
+        );
+        return redirect('/portfolio');
     }
 
     /**

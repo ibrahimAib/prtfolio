@@ -26,7 +26,11 @@
                 <button type="button" class="but border-0 right" id="right" onclick="right('#food1')">
                     <img src="image/icon/arrow-r.svg" alt="">
                 </button>
-
+                @foreach ($line1 as $ph)
+                <div class=" mr-1 mb-1">
+                    <img  src="{{'storage/'. $ph->photo_path}}" alt="">
+                </div>
+                @endforeach
                 <div class=" mr-1 mb-1">
                     <img  src="storage/photos/food/4.jpg" alt="">
                 </div>
@@ -60,6 +64,11 @@
                         <img src="image/icon/arrow-r.svg" alt="">
                     </button>
                     <div class=" d-flex">
+                        @foreach ($line2 as $ph)
+                        <div class=" mr-1 mb-1">
+                            <img  src="{{'storage/'. $ph->photo_path}}" alt="">
+                        </div>
+                        @endforeach
                         <div class=" mr-1 mb-1">
                             <img  src="storage/photos/food/1.jpg" alt="">
                         </div>

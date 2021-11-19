@@ -20,6 +20,7 @@
                 <li class="nav-item"><a href="/portfolio" class="nav-link">PORTFOLIO</a></li>
                 <li class="nav-item"><a href="" class="nav-link">MY GEAR</a></li>
                 <li class="nav-item"><a href="" class="nav-link">SOCIAL</a></li>
+                <li class="nav-item"><a href="/portfolio/create" class="nav-link">CREATE</a></li>
             </ul>
         </div>
     </div>
