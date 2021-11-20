@@ -3,6 +3,7 @@
     background-image: url(public/storage/photos/1.jpg);
     background-repeat: no-repeat;
 }
+
 .h1-f-photo{
     display: block;
     margin-left: auto;
@@ -14,7 +15,7 @@
 }
 .h1-f-photo img:hover{
     max-height: 250px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .h2-f-photo{
     display: block;
@@ -27,7 +28,7 @@
 }
 .h2-f-photo img:hover{
     max-height: 320.5px;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .but{
     width: 60px;
@@ -41,7 +42,38 @@
     opacity: 0.5;
 
 }
+@media(max-width:500px){
+    .but{
+        display: none;
+    }
+}
+.cliked{
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height:100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.822);
 
+}
+.cliked img{
+    border: solid white 2px;
+    max-height: 80vh;
+    width: auto;
+}
+.cliked img:hover{
+    max-height: 500px;
+    width: auto;
+}
+.img-btn{
+    border: none;
+    background: none;
+    padding: 0px;
+}
 .line1{
     position: relative;
 }

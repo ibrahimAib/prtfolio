@@ -18,7 +18,7 @@
         </nav>
     </sectionc>
     <section id="food" class="mt-1" style="height: 100%"> 
-        <div class="line1">
+        <div class="line1" id="jk">
             <div id="food1" class="d-flex h2-f-photo scrollbar ">
                 <button type="button" class="but border-0" id="left" onclick="left('#food1')">
                     <img src="image\icon\arrow-l.svg" alt="">
@@ -27,9 +27,15 @@
                     <img src="image/icon/arrow-r.svg" alt="">
                 </button>
                 @foreach ($line1 as $ph)
-                <div class=" mr-1 mb-1">
+                <button class="img-btn" onclick="show('{{$ph->id}}')">
+                    <div class=" mr-1 mb-1">
+                        <img  src="{{'storage/'. $ph->photo_path}}" alt="">
+                    </div>
+                </button>
+                <div class="cliked" id="{{$ph->id}}" onclick="hide('{{$ph->id}}')">
                     <img  src="{{'storage/'. $ph->photo_path}}" alt="">
                 </div>
+
                 @endforeach
                 <div class=" mr-1 mb-1">
                     <img  src="storage/photos/food/4.jpg" alt="">
@@ -65,10 +71,17 @@
                     </button>
                     <div class=" d-flex">
                         @foreach ($line2 as $ph)
-                        <div class=" mr-1 mb-1">
+                        <button class="img-btn" onclick="show('{{$ph->id}}')">
+                            <div class=" mr-1 mb-1">
+                                <img  src="{{'storage/'. $ph->photo_path}}" alt="">
+                            </div>
+                        </button>
+                        <div class="cliked" id="{{$ph->id}}" onclick="hide('{{$ph->id}}')">
                             <img  src="{{'storage/'. $ph->photo_path}}" alt="">
                         </div>
+
                         @endforeach
+
                         <div class=" mr-1 mb-1">
                             <img  src="storage/photos/food/1.jpg" alt="">
                         </div>

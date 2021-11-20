@@ -24,9 +24,8 @@
 @yield('content')
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
 <script>
+
     var hidden = false;
     function action() {
         hidden = !hidden;
@@ -35,7 +34,7 @@
         } else {
             document.getElementById('food').style.visibility = 'visible';
         }
-    }
+    };
     function left(div){
         var leftPos = $(div).scrollLeft();
         console.log(leftPos);    
@@ -53,7 +52,18 @@
         }, 400);
     };
 
-// 
+    function show(ddd) {
+
+        document.getElementById(ddd).style.visibility = "visible";
+    }
+    function hide(ddd) {
+
+        document.getElementById(ddd).style.visibility = "hidden";
+    }
+
 </script>
+
+
+
 </body>
 </html>
