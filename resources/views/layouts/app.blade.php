@@ -39,7 +39,7 @@
         var leftPos = $(div).scrollLeft();
         console.log(leftPos);    
         $(div).animate({
-            scrollLeft: leftPos - 150
+            scrollLeft: leftPos - 300
         }, 400);
     };
 
@@ -48,7 +48,7 @@
         var leftPos = $(div).scrollLeft();
         console.log(leftPos); 
         $(div).animate({
-            scrollLeft: leftPos + 150
+            scrollLeft: leftPos + 300
         }, 400);
     };
 

@@ -58,15 +58,16 @@
     height:100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.822);
-
+    z-index: +1;
 }
 .cliked img{
-    border: solid white 2px;
+    border: solid white 1px;
+    padding: 4px;
     max-height: 80vh;
     width: auto;
 }
 .cliked img:hover{
-    max-height: 500px;
+    max-height: 80vh;
     width: auto;
 }
 .img-btn{
@@ -79,6 +80,10 @@
 }
 .line2{
     position: relative;
+}
+.is-c img{
+    width: 300px;
+    height: auto;
 }
 #right{
     position: absolute;

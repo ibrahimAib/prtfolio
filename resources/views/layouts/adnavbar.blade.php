@@ -16,11 +16,22 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ml-auto">
                 <!-- Authentication Links -->
-                <li class="nav-item"><a href="/home" class="nav-link">HOME</a></li>
-                <li class="nav-item"><a href="/portfolio" class="nav-link">PORTFOLIO</a></li>
-                <li class="nav-item"><a href="/mygear" class="nav-link">MY GEAR</a></li>
-                <li class="nav-item"><a href="" class="nav-link">SOCIAL</a></li>
+                <li class="nav-item"><a href="/admin" class="nav-link">PHOTO</a></li>
+                <li class="nav-item"><a href="/adgear" class="nav-link">GEAR</a></li>
+                <li class="nav-item"><a href="/adsocial" class="nav-link">SOCIAL</a></li>
+                <li class="nav-item">
+                    <form action="/register" method="post">
+                        @csrf
+                        <button type="submit" class="bg-white border-0 p-0 nav-link py-2 px-2">ADD ADMIN</button>
+                    </form>
+                </li>
                 <li class="nav-item"><a href="/create" class="nav-link">CREATE</a></li>
+                <li class="nav-item">
+                    <form action="/logout" method="post">
+                        @csrf
+                        <button type="submit" class="bg-white border-0 p-0 nav-link py-2 px-2">LOG OUT</button>
+                    </form>
+                </li>
             </ul>
         </div>
     </div>

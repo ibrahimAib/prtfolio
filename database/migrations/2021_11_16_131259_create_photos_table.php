@@ -17,6 +17,7 @@ class CreatePhotosTable extends Migration
             $table->id();
             $table->text('photo_path');
             $table->text('line');
+            $table->text('sec');
             $table->text('comption')->nullable();
             $table->timestamps();
         });

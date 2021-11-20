@@ -20,13 +20,15 @@ class PhotoController extends Controller
     }
     public function food()
     {
-        $line1 = Photo::where('line', '1')->get();
-        $line2 = Photo::where('line', '2')->get();
+        $line1 = Photo::where('line', '1')->where('sec', 'food')->get();
+        $line2 = Photo::where('line', '2')->where('sec', 'food')->get();
         return view('portfolio.food', compact('line1', 'line2'));
     }
     public function drink()
     {
-        return view('portfolio.drink');
+        $line1 = Photo::where('line', '1')->where('sec', 'drink')->get();
+        $line2 = Photo::where('line', '2')->where('sec', 'drink')->get();
+        return view('portfolio.drink', compact('line1', 'line2'));
     }
 
     /**
@@ -36,7 +38,7 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        return view('portfolio.create');
+        return redirect('/');
     }
 
     /**
@@ -54,7 +56,8 @@ class PhotoController extends Controller
             [
                 'comption' => $comption,
                 'photo_path' => $photo_path,
-                'line' => request('line')
+                'line' => request('line'),
+                'sec' => request('sec')
             ]
         );
         return redirect('/portfolio');
@@ -100,8 +103,13 @@ class PhotoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Photo $photo)
     {
-        //
+        $photo->delete();
+        return back();
+    }
+    public function gear()
+    {
+        return view('gear');
     }
 }
